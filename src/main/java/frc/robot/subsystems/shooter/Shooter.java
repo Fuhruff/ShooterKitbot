@@ -33,7 +33,6 @@ public class Shooter extends SubsystemBase {
     return io.stopCommand(this);
   }
 
-  // Read the target while running, and stop when the command ends.
   public Command runShooter() {
     return this.runEnd(
         () -> io.setVelocity(SmartDashboard.getNumber("Shooter/TargetRPM", 3000.0)),

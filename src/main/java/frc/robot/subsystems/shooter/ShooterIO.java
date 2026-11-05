@@ -9,9 +9,11 @@ import edu.wpi.first.wpilibj2.command.Subsystem;
 
 public interface ShooterIO {
   class ShooterIOInputs {
+
     public double velocity = 0.0;
-    public double setpointRPM = 0.0;
+    public double temp = 0.0;
     public double voltage = 0.0;
+    public double current = 0.0;
   }
 
   default void updateInputs(ShooterIOInputs inputs) {}

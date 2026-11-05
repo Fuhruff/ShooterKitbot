@@ -13,9 +13,9 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 
-// Velocity PID based on BlueCheese1086/FRC-1086-Rebuilt. All speeds are RPM.
+
 public class ShooterIOSim implements ShooterIO {
-  // Change these numbers to tune the PID.
+  
   private final double kP = 0.004;
   private final double kI = 0.006;
   private final double kD = 0.0;
