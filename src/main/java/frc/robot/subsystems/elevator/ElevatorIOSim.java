@@ -14,15 +14,21 @@ import frc.robot.subsystems.elevator.*;
 /** Add your docs here. */
 public class ElevatorIOSim implements ElevatorIO {
 
+    
     private final double kP = 0.004;
     private final double kI = 0.006;
     private final double kD = 0.0;
+
+    ElevatorSim elevatorSim;
+    DCMotor motor;
 
     private final PIDController pid = new PIDController(kP, kI, kD);
     private double setpoint = 0.0;
     private double manualVoltage = 0.0;
 
     public ElevatorIOSim() {
+        
         elevatorSim = new ElevatorSim(
-            LinearSystemId.createElevatorSystem(DCMotor.getNEO(1), 0.0, 0.0, ElevatorConstants.gearing));
+            LinearSystemId.createElevatorSystem(DCMotor.getNEO(1), 0.0, 0.0, ElevatorConstants.gearing), DCMotor);
+}
 }
