@@ -4,12 +4,27 @@
 
 package frc.robot.subsystems.elevator;
 
+import org.littletonrobotics.junction.AutoLog;
+
 /** Add your docs here. */
 public interface ElevatorIO {
-    class ElevatorIOInputs {
 
-        public double gearing = 11.2521;
-        public double drumRadius = 0.0;
+    @AutoLog
+    public class ElevatorInputs {
+
+        public double position = 0.0;
+        public double velocity = 0.0;
+        public double voltage = 0.0;
+        public double current = 0.0;
+        public double setpoint = 0.0;
 
     }
+
+    public default void updateInputs(ElevatorInputs inputs) {}
+
+    public default void setVelocity(double velocity) {}
+
+    public default void setVoltage(double voltage) {}
+
+    public default void setPosition(double height) {}
 }
